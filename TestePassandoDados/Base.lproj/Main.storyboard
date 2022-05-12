@@ -1,24 +1,219 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HDh-89-idD">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Tela1-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TestePassandoDados" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oBR-b8-YG9">
+                                <rect key="frame" x="107" y="568" width="200" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Lp8-aI-tyk"/>
+                                    <constraint firstAttribute="width" constant="200" id="lqG-3D-aeK"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Proxima Tela"/>
+                                <connections>
+                                    <segue destination="7MO-hg-v6M" kind="show" id="SMa-Ag-iLz"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eLZ-jZ-0UO">
+                                <rect key="frame" x="40" y="170" width="334" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Idade" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gb5-5v-JGh">
+                                <rect key="frame" x="40" y="224" width="334" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Altura" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cpT-EZ-lGH">
+                                <rect key="frame" x="40" y="278" width="334" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1c1-my-bRn">
+                                <rect key="frame" x="40" y="332" width="334" height="216"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VE2-Wg-IjV">
+                                <rect key="frame" x="107" y="638" width="200" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="cYu-C2-ebt"/>
+                                    <constraint firstAttribute="height" constant="50" id="qvf-gt-Y3L"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Ultima Tela"/>
+                                <connections>
+                                    <action selector="ultimaTelaButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uSG-Ns-zl5"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cpT-EZ-lGH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="03H-Zg-kIu"/>
+                            <constraint firstItem="Gb5-5v-JGh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="2cf-Ap-e2M"/>
+                            <constraint firstItem="oBR-b8-YG9" firstAttribute="top" secondItem="1c1-my-bRn" secondAttribute="bottom" constant="20" id="2vM-Wm-MbD"/>
+                            <constraint firstItem="VE2-Wg-IjV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CfA-c4-zV1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cpT-EZ-lGH" secondAttribute="trailing" constant="40" id="FPZ-EZ-eV1"/>
+                            <constraint firstItem="VE2-Wg-IjV" firstAttribute="top" secondItem="oBR-b8-YG9" secondAttribute="bottom" constant="20" id="FvN-P1-dqs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eLZ-jZ-0UO" secondAttribute="trailing" constant="40" id="JDW-PG-qOy"/>
+                            <constraint firstItem="oBR-b8-YG9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TJ1-JS-XUT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Gb5-5v-JGh" secondAttribute="trailing" constant="40" id="aN0-if-iDE"/>
+                            <constraint firstItem="1c1-my-bRn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="q0z-2i-ZKR"/>
+                            <constraint firstItem="eLZ-jZ-0UO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="rBJ-gc-ZWW"/>
+                            <constraint firstItem="cpT-EZ-lGH" firstAttribute="top" secondItem="Gb5-5v-JGh" secondAttribute="bottom" constant="20" id="sy6-cr-ATc"/>
+                            <constraint firstAttribute="trailing" secondItem="1c1-my-bRn" secondAttribute="trailing" constant="40" id="uGL-hr-khc"/>
+                            <constraint firstItem="Gb5-5v-JGh" firstAttribute="top" secondItem="eLZ-jZ-0UO" secondAttribute="bottom" constant="20" id="v1e-ah-ncL"/>
+                            <constraint firstItem="1c1-my-bRn" firstAttribute="top" secondItem="cpT-EZ-lGH" secondAttribute="bottom" constant="20" id="vYb-Wd-VL9"/>
+                            <constraint firstItem="eLZ-jZ-0UO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="wc3-Gc-rED"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Tela1" id="nyx-23-h95"/>
+                    <connections>
+                        <outlet property="alturaLabel" destination="cpT-EZ-lGH" id="lCs-a0-pck"/>
+                        <outlet property="generoPickerView" destination="1c1-my-bRn" id="K0J-uZ-i3B"/>
+                        <outlet property="idadeLabel" destination="Gb5-5v-JGh" id="cSZ-dJ-uS9"/>
+                        <outlet property="nomeLabel" destination="eLZ-jZ-0UO" id="tKq-Zr-7uC"/>
+                        <segue destination="gaF-T0-sel" kind="show" identifier="irDiretoParaTela3Segue" id="9ac-PS-7fX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1042.0289855072465" y="95.758928571428569"/>
+        </scene>
+        <!--Tela2-->
+        <scene sceneID="d8m-TT-lIz">
+            <objects>
+                <viewController id="7MO-hg-v6M" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="F2r-2l-qe7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dgn-5P-GeT">
+                                <rect key="frame" x="107" y="423" width="200" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="UgN-hp-RoN"/>
+                                    <constraint firstAttribute="width" constant="200" id="yxU-JE-oK7"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Proxima Tela"/>
+                                <connections>
+                                    <segue destination="gaF-T0-sel" kind="show" identifier="irParaTela3Segue" id="AJH-pE-h2L"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8t8-Wf-Xe8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dgn-5P-GeT" firstAttribute="centerX" secondItem="F2r-2l-qe7" secondAttribute="centerX" id="PLk-PD-Qat"/>
+                            <constraint firstItem="dgn-5P-GeT" firstAttribute="centerY" secondItem="F2r-2l-qe7" secondAttribute="centerY" id="WnT-0N-ira"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Tela2" id="Gsj-QV-YMP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0YW-7i-Uej" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1909" y="111"/>
+        </scene>
+        <!--Tela3-->
+        <scene sceneID="08r-po-piG">
+            <objects>
+                <viewController id="gaF-T0-sel" customClass="Tela3ViewController" customModule="TestePassandoDados" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mcu-Fw-lTb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Idade:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2RD-hR-aRc">
+                                <rect key="frame" x="8" y="177" width="398" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Altura:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="odZ-c1-103">
+                                <rect key="frame" x="8" y="206" width="398" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Genero:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MOL-kg-2QE">
+                                <rect key="frame" x="8" y="235" width="398" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vhL-By-G5D">
+                                <rect key="frame" x="8" y="148" width="398" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Rf9-Xg-5Nh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vhL-By-G5D" firstAttribute="top" secondItem="Rf9-Xg-5Nh" secondAttribute="top" constant="8" id="51j-nv-uTM"/>
+                            <constraint firstItem="2RD-hR-aRc" firstAttribute="top" secondItem="vhL-By-G5D" secondAttribute="bottom" constant="8" id="8Kn-9X-Ymx"/>
+                            <constraint firstItem="MOL-kg-2QE" firstAttribute="leading" secondItem="Rf9-Xg-5Nh" secondAttribute="leading" constant="8" id="FCh-Xj-0h2"/>
+                            <constraint firstItem="Rf9-Xg-5Nh" firstAttribute="trailing" secondItem="MOL-kg-2QE" secondAttribute="trailing" constant="8" id="I8G-0K-Uls"/>
+                            <constraint firstItem="Rf9-Xg-5Nh" firstAttribute="trailing" secondItem="odZ-c1-103" secondAttribute="trailing" constant="8" id="Mf9-hq-0yo"/>
+                            <constraint firstItem="odZ-c1-103" firstAttribute="leading" secondItem="Rf9-Xg-5Nh" secondAttribute="leading" constant="8" id="Wpr-zZ-BSM"/>
+                            <constraint firstItem="vhL-By-G5D" firstAttribute="leading" secondItem="Rf9-Xg-5Nh" secondAttribute="leading" constant="8" id="ck7-Ja-TXU"/>
+                            <constraint firstItem="Rf9-Xg-5Nh" firstAttribute="trailing" secondItem="2RD-hR-aRc" secondAttribute="trailing" constant="8" id="d3t-bj-ikA"/>
+                            <constraint firstItem="Rf9-Xg-5Nh" firstAttribute="trailing" secondItem="vhL-By-G5D" secondAttribute="trailing" constant="8" id="k7l-xG-xg2"/>
+                            <constraint firstItem="MOL-kg-2QE" firstAttribute="top" secondItem="odZ-c1-103" secondAttribute="bottom" constant="8" id="lDP-xu-NBa"/>
+                            <constraint firstItem="2RD-hR-aRc" firstAttribute="leading" secondItem="Rf9-Xg-5Nh" secondAttribute="leading" constant="8" id="mkL-6h-EYD"/>
+                            <constraint firstItem="odZ-c1-103" firstAttribute="top" secondItem="2RD-hR-aRc" secondAttribute="bottom" constant="8" id="yhm-Jb-Raj"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Tela3" id="jiv-aQ-ZgO"/>
+                    <connections>
+                        <outlet property="alturaLabel" destination="odZ-c1-103" id="Kmg-c6-ddh"/>
+                        <outlet property="generoLabel" destination="MOL-kg-2QE" id="c6U-PT-SSl"/>
+                        <outlet property="idadeLabel" destination="2RD-hR-aRc" id="nz2-5b-skl"/>
+                        <outlet property="nomeLabel" destination="vhL-By-G5D" id="Jby-Cx-J5E"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w2q-7k-LAK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2714" y="115"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="uoe-cS-mao">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HDh-89-idD" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Kfn-f9-LhL">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="7xX-km-Tzh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rZp-Zk-DxH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="95.758928571428569"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="9ac-PS-7fX"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

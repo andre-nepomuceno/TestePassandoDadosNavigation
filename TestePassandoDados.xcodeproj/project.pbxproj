@@ -16,6 +16,8 @@
 		6DF7A786282D5073006E0915 /* TestePassandoDadosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF7A785282D5073006E0915 /* TestePassandoDadosTests.swift */; };
 		6DF7A790282D5073006E0915 /* TestePassandoDadosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF7A78F282D5073006E0915 /* TestePassandoDadosUITests.swift */; };
 		6DF7A792282D5073006E0915 /* TestePassandoDadosUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF7A791282D5073006E0915 /* TestePassandoDadosUITestsLaunchTests.swift */; };
+		6DF7A79F282D5156006E0915 /* Pessoa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF7A79E282D5156006E0915 /* Pessoa.swift */; };
+		6DF7A7A1282D5901006E0915 /* Tela3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DF7A7A0282D5901006E0915 /* Tela3ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		6DF7A78B282D5073006E0915 /* TestePassandoDadosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestePassandoDadosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DF7A78F282D5073006E0915 /* TestePassandoDadosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestePassandoDadosUITests.swift; sourceTree = "<group>"; };
 		6DF7A791282D5073006E0915 /* TestePassandoDadosUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestePassandoDadosUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		6DF7A79E282D5156006E0915 /* Pessoa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pessoa.swift; sourceTree = "<group>"; };
+		6DF7A7A0282D5901006E0915 /* Tela3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tela3ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 				6DF7A777282D5072006E0915 /* Assets.xcassets */,
 				6DF7A779282D5072006E0915 /* LaunchScreen.storyboard */,
 				6DF7A77C282D5072006E0915 /* Info.plist */,
+				6DF7A79E282D5156006E0915 /* Pessoa.swift */,
+				6DF7A7A0282D5901006E0915 /* Tela3ViewController.swift */,
 			);
 			path = TestePassandoDados;
 			sourceTree = "<group>";
@@ -260,6 +266,8 @@
 			files = (
 				6DF7A773282D506F006E0915 /* ViewController.swift in Sources */,
 				6DF7A76F282D506F006E0915 /* AppDelegate.swift in Sources */,
+				6DF7A79F282D5156006E0915 /* Pessoa.swift in Sources */,
+				6DF7A7A1282D5901006E0915 /* Tela3ViewController.swift in Sources */,
 				6DF7A771282D506F006E0915 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
